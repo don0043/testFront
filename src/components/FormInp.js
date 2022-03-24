@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import axios from "axios";
 
 
 const Button = styled.button`
@@ -22,6 +21,16 @@ const Form = styled.form`
     width: 557px;
     display: flex;
   flex-direction: column;
+
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    width: 300px;
+    height: 50%;
+    margin-left: 30px;
+    
+    
+  }
 
 `;
 
@@ -93,7 +102,7 @@ const FormInp = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-
+        alert("your data delivered:)")
         sendRequest()
 }
 
